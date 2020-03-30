@@ -68,11 +68,11 @@ plt.legend(smaller_dataSet.columns[1:smaller_dataSet.columns.shape[0]])
 
 #lets group them by year to see yearly trend
 
-yearly_data=smaller_dataSet.groupby(smaller_dataSet['Time Serie'].dt.year).mean()
+yearly_data=main_data.groupby(main_data['Time Serie'].dt.year).mean()
 for k in range(0,yearly_data.columns.shape[0]):
     plt.plot(yearly_data[yearly_data.columns[k]].tail(i))
     plt.title(yearly_data.columns[k])
-
     plt.show()
 
-plt.boxplot(yearly_data)
+
+#TODO apply LSTM using keras
