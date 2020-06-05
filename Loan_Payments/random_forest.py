@@ -51,4 +51,4 @@ model.fit(X_train,y_train)
 print("SVM HAS SCORE",model.score(X_test,y_test))
 testResults.update({'svm':model.score(X_test,y_test)})
 
-
+print(testResults)
